@@ -14,6 +14,7 @@ do
     Console.WriteLine("3.Enter a Valid Email Address E.g.- abc.xyz@bl.co.in");
     Console.WriteLine("4.Enter a valid Mobile Format E.g.-91 9989218789  ");
     Console.WriteLine("5.Enter a Valid Password Rules Minimum 8 Characters");
+    Console.WriteLine("6.Enter a Valid Password Rules at Least One uppercase");
     
     // Taking Input From User to Execute Question
     Console.Write("\nPlease Enter Question Number :- ");
@@ -35,6 +36,9 @@ do
             break;
         case 5:
             Registration.Password1();
+            break;
+        case 6:
+            Registration.Password2();
             break;
         default:
             Console.WriteLine("Please Enter Correct Question Number");
