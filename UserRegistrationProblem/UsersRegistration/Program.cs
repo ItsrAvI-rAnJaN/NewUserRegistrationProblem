@@ -10,11 +10,12 @@ do
 {
     Console.WriteLine("\n0.Exit");
     Console.WriteLine("1.Enter a Valid First Name Start with upper case & Min. 3 Characters ");
-    Console.WriteLine("1.Enter a Valid Last Name Start with upper case & Min. 3 Characters ");
+    Console.WriteLine("2.Enter a Valid Last Name Start with upper case & Min. 3 Characters ");
+    Console.WriteLine("3.Enter a Valid Email Address E.g.- abc.xyz@bl.co.in");
     
     // Taking Input From User to Execute Question
     Console.Write("\nPlease Enter Question Number :- ");
-    Choice=Convert.ToInt32(Console.ReadLine());
+    cChoice=Convert.ToInt32(Console.ReadLine());
 
     switch (Choice)
     {
@@ -23,6 +24,9 @@ do
             break;
         case 2:
              Console.WriteLine(Registration.Name("Last"));
+            break;
+        case 3:
+            Console.WriteLine(Registration.EmailAddress("Email Address"));
             break;
         default:
             Console.WriteLine("Please Enter Correct Question Number");
