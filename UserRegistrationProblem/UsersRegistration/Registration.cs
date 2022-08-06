@@ -14,7 +14,7 @@ namespace UsersRegistration
             //Regular Expression for Validation of First Name
             string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
 
-            Console.Write("\nEnter {0} Name :-  ", name);
+            Console.Write("\nEnter {0} Name :- ", name);
             string EnteredName = Console.ReadLine();
 
             //if Name Enter By User is match with Expression  then Valid if not Then Inva;id 
