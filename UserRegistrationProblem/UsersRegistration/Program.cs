@@ -16,6 +16,7 @@ do
     Console.WriteLine("5.Enter a Valid Password Rules Minimum 8 Characters");
     Console.WriteLine("6.Enter a Valid Password Rules at Least One uppercase");
     Console.WriteLine("7.Enter a Valid Password Rules at Least one numeric Number");
+    Console.WriteLine("8.Enter a Valid Password Rules at Least One Special Character");
     
     // Taking Input From User to Execute Question
     Console.Write("\nPlease Enter Question Number :- ");
@@ -43,6 +44,9 @@ do
             break;
         case 7:
             Registration.Password3();
+            break;
+        case 8:
+            Registration.Password4();
             break;
         default:
             Console.WriteLine("Please Enter Correct Question Number");
