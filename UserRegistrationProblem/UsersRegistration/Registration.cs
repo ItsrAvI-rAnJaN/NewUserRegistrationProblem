@@ -28,14 +28,14 @@ namespace UsersRegistration
             string EnteredEmail=Console.ReadLine();
             return Regex.IsMatch(EnteredEmail, REGEX_Email) ? (Email + " is Valid") : (Email + " is Invalid");
         }
-        // Method for Validation Of Mobile Format
+        // Method for Validation of Mobile Format
         public static void MobileFormat()
         {
             Console.Write("\nEnter Mobile number with country code: ");
             var MobileNo = Console.ReadLine();
             string PhoneNo = "^[91]{2}[\\s][6-9][0-9]{9}$";
-            Regex regex4 = new Regex(PhoneNo);
-            if (regex4.IsMatch(MobileNo))
+            Regex regex1 = new Regex(PhoneNo);
+            if (regex1.IsMatch(MobileNo))
             {
                 Console.WriteLine("Mobile number is valid");
             }
@@ -44,5 +44,24 @@ namespace UsersRegistration
                 Console.WriteLine("Mobile number is Invalid!!");
             }
         }
+
+        //Method for Validation of Password One..
+        public static void Password1()
+        {
+            Console.Write("\nEnter Password: ");
+            string Password = Console.ReadLine();
+            string password_regex = "^.{8,}$";
+            Regex regex1 = new Regex(password_regex);
+            if (regex1.IsMatch(Password))
+            {
+                Console.WriteLine("Password is valid !");
+            }
+            else
+            {
+                Console.WriteLine("Password is Invalid ! Try Another one");
+            }
+
+        }
+
     }
 }
