@@ -17,6 +17,7 @@ do
     Console.WriteLine("6.Enter a Valid Password Rules at Least One uppercase");
     Console.WriteLine("7.Enter a Valid Password Rules at Least one numeric Number");
     Console.WriteLine("8.Enter a Valid Password Rules at Least One Special Character");
+    Console.WriteLine("9.Check Email Sample Provided Separately");
     
     // Taking Input From User to Execute Question
     Console.Write("\nPlease Enter Question Number :- ");
@@ -47,6 +48,9 @@ do
             break;
         case 8:
             Registration.Password4();
+            break;
+        case 9:
+            Registration.TestEmail();
             break;
         default:
             Console.WriteLine("Please Enter Correct Question Number");

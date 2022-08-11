@@ -24,9 +24,9 @@ namespace UsersRegistration
         public static string EmailAddress(string Email)
         {
             string REGEX_Email = "^([A-Za-z]){3,}([_.+-]{1}[0-9A-Za-z]{1,}){0,}@[a-z0-9]+[.](com|net|co){0,1}([.]((com )|([a-z]{2}){0,1})){0,1}$";
-            Console.Write("\nEnter {0} :- ",Email);
-            string EnteredEmail=Console.ReadLine();
-            return Regex.IsMatch(EnteredEmail, REGEX_Email) ? (Email + " is Valid") : (Email + " is Invalid");
+            //Console.Write("\nEnter EmailAdress for Validation :- ");
+            //string EnteredEmail=Console.ReadLine();
+            return Regex.IsMatch(Email, REGEX_Email) ? (Email + " is Valid") : (Email + " is Invalid");
         }
         // Method for Validation of Mobile Format
         public static void MobileFormat()
@@ -109,6 +109,23 @@ namespace UsersRegistration
                 Console.WriteLine("Password is Invalid ! Try Another one");
             }
 
+        }
+        public static void TestEmail()
+        {
+
+           //Registration objTestEmail = new Registration();
+            Console.WriteLine("\nA. Valid Emails");
+            string[] ValidEmails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+            for (int i = 0; i < ValidEmails.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + ValidEmails[i] + " : " + EmailAddress(ValidEmails[i]));
+            }
+            Console.WriteLine("\nB. Invalid Emails");
+            string[] InvalidEmails = { "abc", "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+            for (int i = 0; i < InvalidEmails.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + InvalidEmails[i] + " : " + EmailAddress(InvalidEmails[i]));
+            }
         }
 
     }
